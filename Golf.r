@@ -18,7 +18,7 @@ setwd("~/datahackathon/projects/datahackathon2")
 inputfile=read.csv("Golf.csv")
 
 inputfile
-str(inputfile)
+#str(inputfile)
 
 # Basic Data Wrangling to change to 0-No Wind, 1-Wind
 inputfile$Wind <- factor(as.numeric(inputfile$Wind))
