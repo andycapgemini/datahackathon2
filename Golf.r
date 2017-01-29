@@ -14,7 +14,7 @@ library("e1071")
 library(caret)
 
 # Read CSV containing Golf Data
-setwd("~/datahackathon")
+setwd("~/datahackathon/projects/datahackathon2")
 inputfile=read.csv("Golf.csv")
 
 inputfile
@@ -30,7 +30,7 @@ inputfile
 
  
 # Explore the data
-plot(Play~.,data=inputfile)
+#plot(Play~.,data=inputfile)
 
 # Split Data between Training & Test Data Set
 n = nrow(inputfile)
@@ -55,6 +55,4 @@ nb_test_predict
 #table(Predicted=nb_test_predict, Actual=test$Play )
 
 #Confusion Matrix using caret package
-confusionMatrix(data = nb_test_predict,
-
-                reference=test$Play, positive='Yes')
+confusionMatrix(data = nb_test_predict,reference=test$Play, positive='Yes')
